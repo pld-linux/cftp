@@ -1,0 +1,40 @@
+--- cftp-0.11.2/configure.in~	Sat Sep 28 16:41:55 2002
++++ cftp-0.11.2/configure.in	Sat Sep 28 16:41:55 2002
+@@ -20,28 +20,15 @@
+ 
+ dnl libraries
+ 
+-TERMCAP=none
+-AC_CHECK_FUNC(tgetent, [TERMCAP=""])
+-if test "$TERMCAP" = none
+-then
+-	AC_CHECK_LIB(termcap, tgetent, [TERMCAP=-ltermcap])
+-	AC_DEFINE(USE_TERMCAP, 1, [define if we're linking against -ltermcap])
+-fi
+-if test "$TERMCAP" = none
+-then
+-	AC_CHECK_LIB(curses, tgetent, [TERMCAP=-lcurses])
+-	AC_DEFINE(USE_CURSES, 1, [define if we're linking against -lcurses])
+-fi
+-if test "$TERMCAP" = none
+-then
+-	AC_CHECK_LIB(ncurses, tgetent, [TERMCAP=-lncurses])
+-	AC_DEFINE(USE_NCURSES, 1, [define if we're linking against -lncurses])
+-fi
+-if test "$TERMCAP" = none
+-then
+-	AC_MSG_ERROR([can't find termcap (emulation) library])
+-fi
+-LIBS="$LIBS $TERMCAP"
++AC_CHECK_LIB(termcap, tgetent, [LIBS="$LIBS -ltermcap"],
++	[AC_CHECK_LIB(tinfo, tgetent, [LIBS="$LIBS -ltinfo"],
++		[AC_CHECK_LIB(ncurses, tgetent, [LIBS="$LIBS -lncurses"],
++			[AC_CHECK_LIB(curses, tgetent, [LIBS="$LIBS -lcurses"],
++				AC_MSG_ERROR([can't find termcap (emulation) library])
++			)]
++		)]
++	)]
++)
+ 
+ AC_CHECK_LIB(socket, main)
+ AC_CHECK_FUNC(gethostbyname, [], AC_CHECK_LIB(nsl, gethostbyname))
