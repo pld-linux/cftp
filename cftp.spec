@@ -2,7 +2,7 @@ Summary:	Fullscreen ftp client
 Summary(pl):	Pe³noekranowy klient ftp
 Name:		cftp
 Version:	0.12
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Networking
 Source0:	http://ftp.giga.or.at/pub/nih/cftp/%{name}-%{version}.tar.gz
