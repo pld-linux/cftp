@@ -1,0 +1,12 @@
+diff -Nru cftp-0.10/configure.in cftp-0.10.new/configure.in
+--- cftp-0.10/configure.in	Sat Dec  9 14:50:45 2000
++++ cftp-0.10.new/configure.in	Sat Dec 16 06:23:40 2000
+@@ -42,7 +42,7 @@
+ LIBS="$LIBS $TERMCAP"
+ 
+ AC_CHECK_LIB(socket, main)
+-AC_CHECK_LIB(nsl, main)
++AC_CHECK_FUNC(gethostbyname, [], AC_CHECK_LIB(nsl, gethostbyname))
+ AC_CHECK_LIB(resolv, main)
+ 
+ 
