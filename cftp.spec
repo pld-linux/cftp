@@ -18,14 +18,15 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 CFTP is used to transfer files from one computer to another via the
-FTP protocol.  It's advantages over most standard ftp clients is its
+FTP protocol. It's advantages over most standard ftp clients is its
 fullscreen representation of the remote directory tree, providing a
 compact overview of the remote server's contents.
 
 %description -l pl
-CFTP jest u¿ywany do przesy³ania plików z jednego komputera na inny poprzez
-protokó³ FTP. Jego zalety ponad innymi klientami ftp to pe³noekranowa
-reprezentacja drzewa katalogów zdalnego komputera, wsparcie dla IPv6 i inne.
+CFTP jest u¿ywany do przesy³ania plików z jednego komputera na inny
+poprzez protokó³ FTP. Jego zalety ponad innymi klientami ftp to
+pe³noekranowa reprezentacja drzewa katalogów zdalnego komputera,
+wsparcie dla IPv6 i inne.
 
 %prep
 %setup -q
