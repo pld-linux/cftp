@@ -1,0 +1,59 @@
+diff -Nru cftp-0.10/cftp.texi cftp-0.10.new/cftp.texi
+--- cftp-0.10/cftp.texi	Tue Dec  5 23:24:07 2000
++++ cftp-0.10.new/cftp.texi	Sat Dec 16 04:58:49 2000
+@@ -10,9 +10,10 @@
+ 
+ @ifinfo
+ @format
+-START-INFO-DIR-ENTRY
+-* cftp: (cftp).             Comfortable FTP.
+-END-INFO-DIR-ENTRY
++@dircategory Net utilities:
++@direntry
++* cftp: (cftp).				Comfortable FTP
++@end direntry
+ @end format
+ @end ifinfo
+ 
+@@ -80,7 +81,7 @@
+ 
+ @ifinfo
+ @c ****************************************************************
+-@node Top, , ,(dir)
++@node Top, , (dir), (dir)
+ @top cftp
+ 
+ This file documents @sc{cftp}, a fullscreen ftp client running on
+diff -Nru cftp-0.10/functions.texi cftp-0.10.new/functions.texi
+--- cftp-0.10/functions.texi	Thu Dec  7 04:29:13 2000
++++ cftp-0.10.new/functions.texi	Sat Dec 16 06:14:56 2000
+@@ -571,7 +571,7 @@
+ Synopsis: state [state]
+ @end itemize
+ 
+-Change binding state to @var{state}. @xref{Binding States}.
++Change binding state to @var{state}.
+ 
+ @c ---------------------------------------------------------------------
+ @node leave-tag
+@@ -588,7 +588,7 @@
+ 
+ 
+ @c =====================================================================
+-@node Tagging Functions
++@node Tagging Functions, , Selection Functions, Functions
+ @section Tagging Functions
+ @cindex Tagging Functions
+ 
+diff -Nru cftp-0.10/options.texi cftp-0.10.new/options.texi
+--- cftp-0.10/options.texi	Thu Dec  7 04:29:13 2000
++++ cftp-0.10.new/options.texi	Sat Dec 16 05:23:24 2000
+@@ -83,7 +83,7 @@
+ 
+ Specifies how many lines of ftp commands and responses exchanged
+ with the ftp server to remember.  Remembered lines can be displayed
+-with @code{response}.  @xref{response}
++with @code{response}.  @xref{response}.
+ 
+ @c ---------------------------------------------------------------------
+ @node beep
