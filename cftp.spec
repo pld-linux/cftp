@@ -2,7 +2,7 @@ Summary:	Fullscreen ftp client
 Summary(pl):	Pe³noekranowy klient ftp
 Name:		cftp
 Version:	0.10
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Networking
 Group(de):	Applikationen/Netzwerkwesen
@@ -11,6 +11,7 @@ Source0:	http://ftp.giga.or.at/pub/nih/cftp/%{name}-%{version}.tar.gz
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-no_libnsl.patch
 BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	ncurses-devel >= 5.0
 BuildRequires:	readline-devel >= 4.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -34,7 +35,10 @@ reprezentacja drzewa katalogów zdalnego komputera, wsparcie dla IPv6 i inne.
 %patch1 -p1
 
 %build
+rm -f missing
+aclocal
 autoconf
+automake -a -c
 %configure
 %{__make}
 
