@@ -1,5 +1,5 @@
-Summary:	Fullscreen ftp client
-Summary(pl):	Pe³noekranowy klient ftp
+Summary:	Fullscreen FTP client
+Summary(pl):	Pe³noekranowy klient FTP
 Name:		cftp
 Version:	0.12
 Release:	2
@@ -18,13 +18,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 CFTP is used to transfer files from one computer to another via the
-FTP protocol. It's advantages over most standard ftp clients is its
+FTP protocol. It's advantages over most standard FTP clients is its
 fullscreen representation of the remote directory tree, providing a
 compact overview of the remote server's contents.
 
 %description -l pl
 CFTP jest u¿ywany do przesy³ania plików z jednego komputera na inny
-poprzez protokó³ FTP. Jego zalety ponad innymi klientami ftp to
+poprzez protokó³ FTP. Jego zalety ponad innymi klientami FTP to
 pe³noekranowa reprezentacja drzewa katalogów zdalnego komputera,
 wsparcie dla IPv6 i inne.
 
