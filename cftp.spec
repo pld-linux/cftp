@@ -11,7 +11,7 @@ Patch0:		%{name}-info.patch
 Patch1:		%{name}-no_libnsl.patch
 Patch2:		%{name}-AC_LIBOBJ.patch
 Patch3:		%{name}-ac_better_tgetent_detection.patch
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake
 BuildRequires:	readline-devel >= 4.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -36,9 +36,9 @@ wsparcie dla IPv6 i inne.
 %patch3 -p1
 
 %build
-rm -f missing
 %{__aclocal}
 %{__autoconf}
+%{__autoheader}
 %{__automake}
 %configure
 %{__make}
@@ -62,4 +62,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS THANKS TODO
 %attr(755,root,root) %{_bindir}/*
-%{_infodir}/*info*
+%{_infodir}/*.info*
