@@ -16,8 +16,6 @@ BuildRequires:	automake
 BuildRequires:	readline-devel >= 4.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_sysconfdir	/etc
-
 %description
 CFTP is used to transfer files from one computer to another via the
 FTP protocol. It's advantages over most standard ftp clients is its
