@@ -14,6 +14,7 @@ Patch3:		%{name}-ac_better_tgetent_detection.patch
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake
 BuildRequires:	readline-devel >= 4.2
+BuildRequires:	texinfo
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
