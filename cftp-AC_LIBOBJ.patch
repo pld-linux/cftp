@@ -1,0 +1,18 @@
+--- cftp-0.12/configure.in.orig	Tue Sep 17 17:00:25 2002
++++ cftp-0.12/configure.in	Sat Sep 28 16:30:51 2002
+@@ -81,13 +81,8 @@
+ 		 getcwd inet_aton strdup strerror)
+ AC_CHECK_FUNCS(getdomainname getnameinfo)
+ 
+-AC_CHECK_FUNCS(tparam, [tparam=1], [tparam=0])
+-if test "$tparam" -ne 1
+-then
+-	AC_CHECK_FUNCS(tparm, , [LIBOBJS="$LIBOBJS tparam.o"])
+-fi
+-
+-AC_CHECK_FUNCS(getopt_long, , [LIBOBJS="$LIBOBJS getopt1.o getopt.o"])
++AC_CHECK_FUNCS(tparam, [], AC_LIBOBJ(tparam))
++AC_CHECK_FUNCS(getopt_long, [], [AC_LIBOBJ(getopt1) AC_LIBOBJ(getopt)])
+ 
+ dnl system services
+ 
