@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications/Networking
 Source0:	http://ftp.giga.or.at/pub/nih/cftp/%{name}-%{version}.tar.gz
+# Source0-md5:	e497c2cf060a6906f48ac99f55bedc8a
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-no_libnsl.patch
 Patch2:		%{name}-AC_LIBOBJ.patch
