@@ -1,13 +1,15 @@
 Summary:	Fullscreen ftp client
 Summary(pl):	Pe³noekranowy klient ftp
 Name:		cftp
-Version:	0.11.2
+Version:	0.12
 Release:	1
 License:	GPL
 Group:		Applications/Networking
 Source0:	http://ftp.giga.or.at/pub/nih/cftp/%{name}-%{version}.tar.gz
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-no_libnsl.patch
+Patch2:		%{name}-AC_LIBOBJ.patch
+Patch3:		%{name}-ac_better_tgetent_detection.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	readline-devel >= 4.2
@@ -31,10 +33,12 @@ wsparcie dla IPv6 i inne.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
+%patch3 -p1
 
 %build
 rm -f missing
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
@@ -45,8 +49,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-
-gzip -9nf AUTHORS ChangeLog NEWS THANKS TODO
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -59,6 +61,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc AUTHORS ChangeLog NEWS THANKS TODO
 %attr(755,root,root) %{_bindir}/*
 %{_infodir}/*info*
