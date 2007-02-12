@@ -1,5 +1,5 @@
 Summary:	Fullscreen FTP client
-Summary(pl.UTF-8):   Pełnoekranowy klient FTP
+Summary(pl.UTF-8):	Pełnoekranowy klient FTP
 Name:		cftp
 Version:	0.12
 Release:	2
