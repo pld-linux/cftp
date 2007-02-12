@@ -1,5 +1,5 @@
 Summary:	Fullscreen FTP client
-Summary(pl):	Pe�noekranowy klient FTP
+Summary(pl.UTF-8):   Pełnoekranowy klient FTP
 Name:		cftp
 Version:	0.12
 Release:	2
@@ -23,10 +23,10 @@ FTP protocol. It's advantages over most standard FTP clients is its
 fullscreen representation of the remote directory tree, providing a
 compact overview of the remote server's contents.
 
-%description -l pl
-CFTP jest u�ywany do przesy�ania plik�w z jednego komputera na inny
-poprzez protok� FTP. Jego zalety ponad innymi klientami FTP to
-pe�noekranowa reprezentacja drzewa katalog�w zdalnego komputera,
+%description -l pl.UTF-8
+CFTP jest używany do przesyłania plików z jednego komputera na inny
+poprzez protokół FTP. Jego zalety ponad innymi klientami FTP to
+pełnoekranowa reprezentacja drzewa katalogów zdalnego komputera,
 wsparcie dla IPv6 i inne.
 
 %prep
